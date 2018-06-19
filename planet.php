@@ -1,7 +1,7 @@
 <?php
-require 'Model/Init.php';
-require 'Model/Main.php';
-require 'simple_html_dom.php';
+require '/var/www/html/ppg/ppg/Model/Init.php';
+require '/var/www/html/ppg/ppg/Model/Main.php';
+require '/var/www/html/ppg/ppg/simple_html_dom.php';
 $main = new Main();
 $brands = json_decode($main->getBrands(), true);
 $siteId = 4;
@@ -30,7 +30,7 @@ foreach($brands as $row){
                   'price' => trim($price)
                 );
         $main->recordData($data);
-        
+
       }
     }else{
       $hasNextPage = false;
